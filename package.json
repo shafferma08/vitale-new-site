@@ -1,0 +1,14 @@
+{
+  "name": "vitale-new-site",
+  "version": "1.0.0",
+  "description": "Vitale Brothers - Muralists & Artists in St. Petersburg",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --watch",
+    "serve": "node serve.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

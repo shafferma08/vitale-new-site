@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node build.js)",
+      "Bash(\"C:\\\\Program Files\\\\Git\\\\usr\\\\bin\\\\grep.exe\" -c \"nav__logo\" \"C:\\\\Users\\\\mshaf\\\\Documents\\\\Overspray Art Space\\\\vitale-website\\\\vitale-new-site\\\\dist\\\\index.html\" \"C:\\\\Users\\\\mshaf\\\\Documents\\\\Overspray Art Space\\\\vitale-website\\\\vitale-new-site\\\\dist\\\\services\\\\commercial.html\")",
+      "Skill(schedule)",
+      "Read(//c/Users/mshaf/Documents/Overspray Art Space/vitale-website/**)",
+      "Read(//c/Users/mshaf/Documents/Overspray Art Space/**)",
+      "Bash(sed -n '40,90p' \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/artbeat-catalyst-shine.html\")",
+      "Bash(sed -n '40,90p' \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/artbeat-eyes-tampa.html\")",
+      "Bash(sed -n '40,90p' \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/artbeat-cltampa-restore.html\")",
+      "Bash(sed -n '60,90p' \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/artbeat-catalyst-shine.html\")",
+      "Bash(sed -n '40,90p' \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/artbeat-fox13-paint.html\")",
+      "Bash(cp \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/old-website-pics/10/marilyn1.jpg\" \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/assets/images/portfolio-3.png\")",
+      "Bash(cp \"C:/Users/mshaf/Documents/Overspray Art Space/city-art-walls/Trails Crossing Images/RickyWatts-MarkRapien-SHINE-2021.jpg\" \"C:/Users/mshaf/Documents/Overspray Art Space/vitale-website/vitale-new-site/assets/images/portfolio-2.png\")"
+    ]
+  }
+}

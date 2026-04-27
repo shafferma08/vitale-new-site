@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro & Pin-Up Collection | Vitale Bros.</title>
+  <meta name="description" content="Retro and pin-up style murals by Vitale Bros. — vintage Florida vibes, classic characters, and mid-century flair hand-painted across Tampa Bay." />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .project-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .project-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .project-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transform: scale(1.02);
+    }
+
+    .project-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(13, 13, 13, 0.4) 0%,
+          rgba(13, 13, 13, 0.1) 30%,
+          rgba(13, 13, 13, 0.2) 60%,
+          rgba(13, 13, 13, 0.85) 85%,
+          var(--color-bg) 100%
+        );
+      z-index: 1;
+    }
+
+    .project-hero__bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 50%, rgba(13, 13, 13, 0.4) 100%);
+      z-index: 2;
+    }
+
+    .project-hero__content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 0 var(--space-2xl) var(--space-5xl);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .project-hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 8px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: var(--space-lg);
+      backdrop-filter: blur(12px);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-hero__tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-primary);
+    }
+
+    .project-hero__title {
+      font-family: var(--font-hero);
+      font-size: clamp(var(--size-5xl), 7vw, 7rem);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-lg);
+      text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.6),
+        0 4px 40px rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+    }
+
+    .project-hero__title .gradient-text {
+      color: #ffffff;
+      -webkit-text-stroke: 2px var(--color-primary);
+      paint-order: stroke fill;
+      text-shadow:
+        0 0 20px rgba(212, 25, 32, 0.5),
+        0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-hero__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .project-hero__meta-divider {
+      width: 1px;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .project-hero__scroll {
+      position: absolute;
+      bottom: var(--space-lg);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: var(--size-xs);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: bounceScroll 2s ease-in-out infinite;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity var(--duration-base);
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-hero__scroll:hover { opacity: 1; }
+
+    .project-hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--color-primary), transparent);
+    }
+
+    @keyframes bounceScroll {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    .project-details {
+      padding: var(--space-3xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .project-details__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-4xl);
+      align-items: start;
+    }
+
+    .project-details__description {
+      font-size: var(--size-lg);
+      font-weight: 300;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+    }
+
+    .project-details__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .project-details__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .project-details__label {
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      opacity: 0.5;
+    }
+
+    .project-details__value {
+      font-size: var(--size-base);
+      color: var(--color-text);
+      font-weight: 400;
+    }
+
+    .project-gallery {
+      padding: var(--space-4xl) 0 var(--space-5xl);
+    }
+
+    .project-gallery__label {
+      font-family: var(--font-display);
+      font-size: var(--size-2xl);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2xl);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .project-gallery__label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+
+    .project-masonry {
+      column-count: 3;
+      column-gap: var(--space-lg);
+    }
+
+    .gallery-img-wrap {
+      break-inside: avoid;
+      margin-bottom: var(--space-lg);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-card);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform var(--duration-slow) var(--ease-bounce);
+    }
+
+    .gallery-img-wrap:hover img { transform: scale(1.05); }
+
+    .gallery-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      transition: all var(--duration-base) var(--ease-smooth);
+      pointer-events: none;
+      box-shadow: inset 0 0 0 0 transparent;
+    }
+
+    .gallery-img-wrap:hover::after {
+      background: rgba(212, 25, 32, 0.1);
+      box-shadow: inset 0 0 0 2px var(--color-primary);
+    }
+
+    @media (max-width: 1024px) {
+      .project-masonry { column-count: 2; }
+      .project-details__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .project-masonry { column-count: 1; }
+      .project-hero__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+      }
+      .project-hero__meta-divider { display: none; }
+      .project-hero__content { padding-bottom: var(--space-5xl); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" id="nav-logo">
+        <img src="/assets/images/logo-white.png" alt="Vitale Bros." class="nav__logo-img" />
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="/" class="nav__link" id="nav-home">Home</a>
+        <a href="/about.html" class="nav__link" id="nav-about">About</a>
+        <a href="/projects.html" class="nav__link nav__link--active" id="nav-projects">Projects</a>
+        <a href="/artbeat.html" class="nav__link" id="nav-artbeat">ArtBeat</a>
+        <a href="/contact.html" class="nav__cta" id="nav-contact">Get in Touch</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="nav-mobile">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/artbeat.html">ArtBeat</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ============================
+       CINEMATIC FULL-BLEED HERO
+       ============================ -->
+  <section class="project-hero" id="project-hero">
+    <div class="project-hero__bg">
+      <img src="/assets/images/retro/retro-82-degrees.jpg" alt="Retro pin-up mural by Vitale Bros." />
+    </div>
+
+    <div class="project-hero__content reveal">
+      <div class="project-hero__tag">
+        <span class="project-hero__tag-dot"></span>
+        Retro & Pin-Up
+      </div>
+      <h1 class="project-hero__title">Retro & <br><span class="gradient-text">Pin-Up</span></h1>
+      <div class="project-hero__meta">
+        <div class="project-hero__meta-item">
+          <i class="fas fa-map-marker-alt" style="color: var(--color-primary)"></i>
+          Tampa Bay Area, FL
+        </div>
+        <div class="project-hero__meta-divider"></div>
+        <div class="project-hero__meta-item">
+          <i class="fas fa-tag" style="color: var(--color-primary)"></i>
+          Commercial & Character Art
+        </div>
+      </div>
+    </div>
+
+    <div class="project-hero__scroll" id="scroll-indicator" onclick="document.getElementById('project-details').scrollIntoView({behavior:'smooth'})">
+      <span>Scroll</span>
+      <div class="project-hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================
+       PROJECT DETAILS
+       ============================ -->
+  <section class="project-details" id="project-details">
+    <div class="container">
+      <div class="project-details__inner reveal">
+        <div class="project-details__description">
+          <p>A curated collection of retro and pin-up style murals that celebrate vintage Americana and classic Florida charm. From mid-century beach pin-ups and Elvis portraits to diner-style character art and "Wish You Were Here" postcards, these pieces channel the golden era of hand-painted signage and illustration. Each mural is a nod to a time when art was bold, characters had personality, and every wall told a story.</p>
+        </div>
+        <div class="project-details__sidebar">
+          <div class="project-details__info">
+            <span class="project-details__label">Scope</span>
+            <span class="project-details__value">Multiple Commercial Projects</span>
+          </div>
+          <div class="project-details__info">
+            <span class="project-details__label">Location</span>
+            <span class="project-details__value">Tampa Bay Area, FL</span>
+          </div>
+          <div class="project-details__info">
+            <span class="project-details__label">Category</span>
+            <span class="project-details__value">Retro, Pin-Up & Character Art</span>
+          </div>
+          <div class="project-details__info">
+            <span class="project-details__label">Style</span>
+            <span class="project-details__value">Vintage Americana / Mid-Century / Illustrative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       PROJECT GALLERY
+       ============================ -->
+  <section class="project-gallery">
+    <div class="container">
+
+      <div class="project-gallery__label reveal">Project Gallery</div>
+
+      <div class="project-masonry">
+
+        <div class="gallery-img-wrap reveal reveal--delay-1">
+          <img src="/assets/images/retro/retro-the-saint.jpg" alt="The Saint — geometric pin-up silhouette mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-2">
+          <img src="/assets/images/retro/retro-beach-pinup.jpg" alt="Beach pin-up in green bikini mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-3">
+          <img src="/assets/images/retro/retro-elvis.jpg" alt="Elvis Presley portrait mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-1">
+          <img src="/assets/images/retro/retro-82-degrees-ukulele.jpg" alt="82 Degrees ukulele girl mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-2">
+          <img src="/assets/images/retro/retro-coffee-waitress.jpg" alt="Retro coffee shop waitress mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-3">
+          <img src="/assets/images/retro/retro-go-fishing.jpg" alt="Go Fishing retro tarpon mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-1">
+          <img src="/assets/images/retro/retro-leopard-bikini.jpg" alt="St. Pete Beach leopard bikini pin-up" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-2">
+          <img src="/assets/images/retro/retro-wish-you-were-here.jpg" alt="Wish You Were Here tropical pin-up" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-3">
+          <img src="/assets/images/retro/retro-diner-mural.jpg" alt="Come and Get It retro diner mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-1">
+          <img src="/assets/images/retro/retro-keystone-motel.jpg" alt="Keystone Motel pin-up mural" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-2">
+          <img src="/assets/images/retro/retro-best-things.jpg" alt="Vintage waitress — The best things in life" />
+        </div>
+
+        <div class="gallery-img-wrap reveal reveal--delay-3">
+          <img src="/assets/images/retro/retro-82-degrees.jpg" alt="82 Degrees St. Pete Beach building mural" />
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-4xl);" class="reveal">
+        <a href="/projects.html" class="btn btn--outline">
+          &larr; Back to Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <div class="cta__inner reveal">
+        <div class="cta__bg-glow cta__bg-glow--1"></div>
+        <div class="cta__bg-glow cta__bg-glow--2"></div>
+        <h2 class="cta__title">Ready to Transform <span class="gradient-text">Your Space?</span></h2>
+        <p class="cta__text">Let's turn your blank wall into a masterpiece.</p>
+        <div class="cta__actions">
+          <a href="/contact.html" class="btn btn--primary">
+            Start Your Project <span class="btn__arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo"><img src="/assets/images/logo-white.png" alt="Vitale Bros." class="footer__logo-img" /></a>
+          <p class="footer__desc">Transforming blank walls into vibrant murals. Elevating St. Petersburg's artistic spirit since 1992.</p>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Navigate</h4>
+          <div class="footer__links">
+            <a href="/" class="footer__link">Home</a>
+            <a href="/about.html" class="footer__link">About</a>
+            <a href="/projects.html" class="footer__link">Projects</a>
+            <a href="/artbeat.html" class="footer__link">ArtBeat</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Services</h4>
+          <div class="footer__links">
+            <a href="/projects.html" class="footer__link">Commercial Murals</a>
+            <a href="/projects.html" class="footer__link">Residential Murals</a>
+            <a href="/projects.html" class="footer__link">Live Painting</a>
+            <a href="/projects.html" class="footer__link">Signs & Canvas</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <div class="footer__links">
+            <a href="mailto:info@vitalebrothers.com" class="footer__link">info@vitalebrothers.com</a>
+            <a href="tel:7276439280" class="footer__link">(727) 643-9280</a>
+            <span class="footer__link" style="color: var(--color-text-subtle)">St. Petersburg, FL</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Vitale Bros. All Rights Reserved.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@vitalebros" target="_blank" rel="noopener" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/vitalebrostheartists" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@johnvitale8133" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

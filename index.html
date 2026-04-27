@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitale Bros. | Bringing Art to the Community Since 1992</title>
+  <meta name="description" content="Vitale Bros. has been bringing art to St. Petersburg and Tampa Bay since 1992. Three decades of murals, live painting, and public art for stadiums, storefronts, homes, and community spaces." />
+  <link rel="icon" type="image/png" href="assets/images/logo-red.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-red.png" />
+  <meta property="og:site_name" content="Vitale Bros." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vitalebrothers.com/" />
+  <meta property="og:title" content="Vitale Bros. | Bringing Art to the Community Since 1992" />
+  <meta property="og:description" content="Vitale Bros. has been bringing art to St. Petersburg and Tampa Bay since 1992. Three decades of murals, live painting, and public art for stadiums, storefronts, homes, and community spaces." />
+  <meta property="og:image" content="https://vitalebrothers.com/assets/images/hero-bg.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vitale Bros. | Bringing Art to the Community Since 1992" />
+  <meta name="twitter:description" content="Vitale Bros. has been bringing art to St. Petersburg and Tampa Bay since 1992. Three decades of murals, live painting, and public art for stadiums, storefronts, homes, and community spaces." />
+  <meta name="twitter:image" content="https://vitalebrothers.com/assets/images/hero-bg.png" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+    <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" id="nav-logo">
+        <img src="assets/images/logo-white.png" alt="Vitale Bros." class="nav__logo-img" />
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="index.html" class="nav__link" data-nav="home" id="nav-home">Home</a>
+        <a href="about.html" class="nav__link" data-nav="about" id="nav-about">About</a>
+        <a href="projects.html" class="nav__link" data-nav="projects" id="nav-projects">Projects</a>
+        <a href="artbeat.html" class="nav__link" data-nav="artbeat" id="nav-artbeat">ArtBeat</a>
+        <a href="contact.html" class="nav__cta" data-nav="contact" id="nav-contact">Get in Touch</a>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="nav-mobile">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="artbeat.html" data-nav="artbeat">ArtBeat</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+
+    <!-- Full-bleed mural slideshow — images stack, JS crossfades them -->
+    <div class="hero__slideshow" id="hero-slideshow" aria-hidden="true">
+      <div class="hero__slide hero__slide--active">
+        <!-- Replaced Cowboy with vibrant flowers/butterflies for perfect contrast with dark leaves on the left -->
+        <img src="assets/images/backyard-murals/backyard-butterfliesandflowers.jpg" alt="Tropical Flowers and Butterflies mural" class="hero__slide-img object-pos-center" />
+      </div>
+      <div class="hero__slide">
+        <!-- 82 degrees is fairly centered -->
+        <img src="assets/images/retro/retro-82-degrees.jpg" alt="St. Pete Beach 82 Degrees mural" class="hero__slide-img object-pos-center" />
+      </div>
+      <div class="hero__slide">
+        <!-- Pool mural looks good centered -->
+        <img src="assets/images/backyard-murals/backyard-pool.jpg" alt="Tropical pool mural" class="hero__slide-img object-pos-center" />
+      </div>
+      <div class="hero__slide">
+        <!-- Replaced the pinup with window for retro elvis, focus on right to avoid text -->
+        <img src="assets/images/retro/retro-elvis.jpg" alt="Retro Elvis beach mural" class="hero__slide-img object-pos-right-center" />
+      </div>
+    </div>
+
+    <!-- Gradient scrim: heavy on left for text, fades out right to show full art -->
+    <div class="hero__scrim"></div>
+
+    <!-- Content anchored to left -->
+    <div class="container hero__content">
+      <div class="hero__inner">
+        <div class="hero__kicker">
+          <span class="hero__kicker-dot"></span>
+          St. Petersburg, FL, Est. 1992
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-brand">Vitale Bros.</span>
+          <span class="hero__title-line">Bringing Art</span>
+          <span class="hero__title-line">to the Community</span>
+          <span class="hero__title-line hero__title-accent">Since 1992.</span>
+        </h1>
+
+        <p class="hero__description">
+          Three decades of murals, live painting, and public art across St. Pete, Tampa, and beyond. A family studio that shows up, listens, and paints walls people want to stand in front of.
+        </p>
+
+        <div class="hero__actions">
+          <a href="projects.html" class="btn btn--primary" id="hero-cta-explore">
+            View Our Work <span class="btn__arrow">&rarr;</span>
+          </a>
+          <a href="contact.html" class="btn btn--outline" id="hero-cta-contact">
+            Start a Project
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-number" id="stat-years">30+</div>
+            <div class="hero__stat-label">Years of Artistry</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-number" id="stat-murals">500+</div>
+            <div class="hero__stat-label">Murals Created</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-number" id="stat-brands">100+</div>
+            <div class="hero__stat-label">Brand Partners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide dots indicator -->
+    <div class="hero__dots" aria-label="Slideshow progress">
+      <button class="hero__dot hero__dot--active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="hero__dot" data-index="3" aria-label="Slide 4"></button>
+    </div>
+
+  </section>
+
+  <!-- ========== PROOF BAR — Press credentials ========== -->
+  <!-- Ported from prototype (CONTENT-002, 2026-04-19). Press only; client
+       logo strip (BUILD-009) is gated on usage rights from Marianne. -->
+  <section class="proof" id="press-bar" aria-label="Press coverage">
+    <div class="container">
+      <div class="proof__row">
+        <div class="proof__label">As featured in</div>
+        <div class="proof__logos">
+          <a href="artbeat-fox13-paint.html" class="logo-chip">Fox 13 Tampa Bay</a>
+          <a href="artbeat-catalyst-shine.html" class="logo-chip">St. Pete Catalyst</a>
+          <a href="artbeat-cltampa-restore.html" class="logo-chip">Creative Loafing</a>
+          <a href="artbeat-ilovetheburg-patients.html" class="logo-chip">ilovetheburg</a>
+          <a href="artbeat-tbt-blue-goose.html" class="logo-chip">Tampa Bay Times</a>
+          <a href="artbeat-eyes-tampa.html" class="logo-chip">Eyes on the Streets</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OUR STORY ========== -->
+  <section class="about-preview" id="about-preview">
+    <div class="container">
+      <div class="about-preview__inner">
+        <div class="about-preview__image-wrap reveal">
+          <img src="assets/images/services-bg.png" alt="Vitale Bros. artists at work" class="about-preview__image" />
+          <div class="about-preview__image-accent"></div>
+        </div>
+
+        <div class="about-preview__content reveal reveal--delay-2">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Built on<br><span class="gradient-text">Hustle &amp; Heart</span></h2>
+          <p class="about-preview__text">
+            What started with a sketch on a napkin in 1992 became one of Tampa Bay's most iconic mural studios. Johnny Vitale and his crew have been transforming walls, building brands, and shaping St. Petersburg's identity as a world-class arts destination ever since.
+          </p>
+
+          <div class="about-preview__highlights">
+            <div class="about-highlight">
+              <div class="about-highlight__num">1992</div>
+              <div class="about-highlight__label">Founded</div>
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight__num">3+</div>
+              <div class="about-highlight__label">Decades Strong</div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn--outline" id="about-cta">
+            Read Our Story <span class="btn__arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services__header reveal">
+        <div class="services__header-left">
+          <span class="section-label">What We Do</span>
+          <h2 class="section-title">Creativity<br>Without <span class="gradient-text">Limits</span></h2>
+          <p class="section-subtitle">From massive building murals to intimate canvas pieces, we bring your vision to life.</p>
+        </div>
+        <a href="projects.html" class="btn btn--outline" id="services-view-all">See All Work <span class="btn__arrow">&rarr;</span></a>
+      </div>
+
+      <div class="services__grid">
+        <a href="services/commercial.html" class="service-card reveal reveal--delay-1" id="service-commercial">
+          <img src="assets/images/bucs-murals/bucs-run.jpg" class="service-card__img" alt="Commercial Murals" />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Commercial Murals</h3>
+            <p class="service-card__desc">Stadiums, storefronts, corporate walls. Large-scale art that doubles as signage for your brand.</p>
+            <span class="service-card__cta">Explore <i class="fas fa-arrow-right" style="font-size:0.7em;"></i></span>
+          </div>
+        </a>
+
+        <a href="services/residential.html" class="service-card reveal reveal--delay-2" id="service-residential">
+          <img src="assets/images/backyard-murals/backyard-pool.jpg" class="service-card__img" alt="Residential Murals" />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Residential</h3>
+            <p class="service-card__desc">Pools, fences, garages, and indoor walls. Your home, turned into art.</p>
+            <span class="service-card__cta">Explore <i class="fas fa-arrow-right" style="font-size:0.7em;"></i></span>
+          </div>
+        </a>
+
+        <a href="services/live-events.html" class="service-card reveal reveal--delay-3" id="service-live-events">
+          <img src="assets/images/rays/inprogress-tangredi.jpg" class="service-card__img" alt="Live Painting and Events" />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Live &amp; Events</h3>
+            <p class="service-card__desc">Watch art happen. Live painting for galas, festivals, activations, and openings.</p>
+            <span class="service-card__cta">Explore <i class="fas fa-arrow-right" style="font-size:0.7em;"></i></span>
+          </div>
+        </a>
+
+        <a href="services/community-civic.html" class="service-card reveal reveal--delay-4" id="service-community-civic">
+          <img src="assets/images/retro/retro-82-degrees.jpg" class="service-card__img" alt="Community and Civic Art" />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Community &amp; Civic</h3>
+            <p class="service-card__desc">Public art, festival pieces, school walls. The work that helped shape St. Pete.</p>
+            <span class="service-card__cta">Explore <i class="fas fa-arrow-right" style="font-size:0.7em;"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <!-- Ported from prototype (BUILD-007, 2026-04-21). Cream surface sits
+       between the dark Services grid above and dark Featured Work below. -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="process__header reveal">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">From <span class="gradient-text">napkin sketch</span><br>to finished wall.</h2>
+        <p class="process__intro">Simple, collaborative, and built to keep you confident all the way through. Most projects run four to six weeks, start to finish.</p>
+      </div>
+
+      <div class="process__grid">
+        <div class="step reveal reveal--delay-1">
+          <div class="step__number">01</div>
+          <div class="step__title">Brief &amp; Visit</div>
+          <div class="step__text">We meet at your space, walk the wall, and talk through goals, audience, and budget. Free consultation, no pressure.</div>
+        </div>
+        <div class="step reveal reveal--delay-2">
+          <div class="step__number">02</div>
+          <div class="step__title">Sketch &amp; Quote</div>
+          <div class="step__text">You get concept sketches and a clear price. We refine together until the direction feels unmistakably yours.</div>
+        </div>
+        <div class="step reveal reveal--delay-3">
+          <div class="step__number">03</div>
+          <div class="step__title">Paint</div>
+          <div class="step__text">We prep the surface and bring the art to life. Most walls take 3 to 14 days depending on scale. We keep you posted with progress shots.</div>
+        </div>
+        <div class="step reveal reveal--delay-4">
+          <div class="step__number">04</div>
+          <div class="step__title">Unveil &amp; Protect</div>
+          <div class="step__text">A UV-rated clearcoat keeps the colors alive for 7+ years in Florida sun. We throw in a touch-up guarantee for the first year.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED WORK ========== -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="work__header reveal">
+        <div>
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
+        </div>
+        <a href="projects.html" class="btn btn--outline" id="work-view-all">
+          View All <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="work__grid">
+        <!-- Hero card spans two rows -->
+        <a href="project-rays.html" class="work-card work-card--hero reveal reveal--delay-1" id="work-card-1">
+          <img src="assets/images/rays/inprogress-tangredi.jpg" alt="Tampa Bay Rays stadium mural" class="work-card__image" />
+          <div class="work-card__overlay">
+            <span class="work-card__tag">Sports &amp; Entertainment</span>
+            <h3 class="work-card__title">Tampa Bay Rays</h3>
+            <p class="work-card__desc">Celebrating the Rays' City Connect uniforms with a dynamic stadium piece.</p>
+          </div>
+        </a>
+
+        <a href="project-bucs.html" class="work-card reveal reveal--delay-2" id="work-card-2">
+          <img src="assets/images/bucs-murals/bucs-run.jpg" alt="Tampa Bay Buccaneers mural" class="work-card__image" />
+          <div class="work-card__overlay">
+            <span class="work-card__tag">Sports &amp; Entertainment</span>
+            <h3 class="work-card__title">Tampa Bay Buccaneers</h3>
+            <p class="work-card__desc">Large-scale NFL murals celebrating Bucs football.</p>
+          </div>
+        </a>
+
+        <a href="project-backyard-escapes.html" class="work-card reveal reveal--delay-3" id="work-card-3">
+          <img src="assets/images/backyard-murals/backyard-pool.jpg" alt="Backyard Escapes residential mural" class="work-card__image" />
+          <div class="work-card__overlay">
+            <span class="work-card__tag">Residential</span>
+            <h3 class="work-card__title">Backyard Escapes</h3>
+            <p class="work-card__desc">Custom outdoor murals for pools, fences &amp; patios.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials__header reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+        <p class="section-subtitle">The impact of our murals speaks for itself. Here's what our partners think.</p>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal reveal--delay-1" id="testimonial-1">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"When it comes to impeccable artwork, mural work and professionalism, the Vitale Bros are top tier. Not only have they served the St. Pete and Tampa communities with their unparalleled talent for many years, they have helped mold and develop the local art scene. I can't recommend them enough."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AC</div>
+            <div>
+              <div class="testimonial-card__name">Ashley Cantero</div>
+              <div class="testimonial-card__role">Client, St. Petersburg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal--delay-2" id="testimonial-2">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"Personable, professional, and talented all rolled into one creative package. Pricing was completely fair for the amount of work they delivered, and on a very timely schedule."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">DP</div>
+            <div>
+              <div class="testimonial-card__name">Dan Pemberton</div>
+              <div class="testimonial-card__role">Pesky Pelican</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal--delay-3" id="testimonial-3">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"I cannot thank the Vitale Brothers enough for the magnificent piece of art they created for my fianc&eacute;. Their work is magnificent, they are truly talented artists."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MP</div>
+            <div>
+              <div class="testimonial-card__name">Melissa Phillips</div>
+              <div class="testimonial-card__role">Client, Tampa Bay</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal--delay-1" id="testimonial-4">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"Finally got to meet the wonderful brother muralists today finishing off their child portraits on the Evil Don Tattoo wall. Wonderful work."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MS</div>
+            <div>
+              <div class="testimonial-card__name">Michael Sheehan</div>
+              <div class="testimonial-card__role">Client, St. Petersburg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal--delay-2" id="testimonial-5">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"These guys have been creating art their entire lives and their work is top notch. Whether you're looking for a mural, a commission, or just to support local art, the Vitale Bros are the first place to start."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">EY</div>
+            <div>
+              <div class="testimonial-card__name">Elizabeth Young</div>
+              <div class="testimonial-card__role">Client, Tampa Bay</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal--delay-3" id="testimonial-6">
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+            <span class="testimonial-card__star">&#9733;</span>
+          </div>
+          <p class="testimonial-card__text">"The Vitale Brothers are incredibly talented artists and wonderful people. Their artwork not only beautifies but brings communities together."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AH</div>
+            <div>
+              <div class="testimonial-card__name">Amanda Hargett</div>
+              <div class="testimonial-card__role">Client, St. Petersburg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM DAILY ART FEED ========== -->
+  <section class="ig-feed" id="ig-feed">
+    <div class="container">
+      <div class="ig-feed__header reveal">
+        <div class="ig-feed__header-left">
+          <span class="section-label">Daily Art Feed</span>
+          <h2 class="section-title">Fresh from the <span class="gradient-text">Studio</span></h2>
+        </div>
+        <a href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" class="ig-feed__handle" id="ig-feed-handle">
+          <i class="fab fa-instagram"></i> @vitalebros <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="ig-feed__grid">
+        <a class="ig-feed__tile reveal reveal--delay-1" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/rays/johnny.jpg" alt="Studio post: Rays mural in progress" loading="lazy" />
+        </a>
+        <a class="ig-feed__tile reveal reveal--delay-2" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/bucs-murals/bropainitng.jpg" alt="Studio post: Bucs mural painting session" loading="lazy" />
+        </a>
+        <a class="ig-feed__tile reveal reveal--delay-3" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/retro/retro-coffee-waitress.jpg" alt="Studio post: Retro coffee waitress mural" loading="lazy" />
+        </a>
+        <a class="ig-feed__tile reveal reveal--delay-4" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/backyard-murals/backyard-palms.jpg" alt="Studio post: Backyard palms mural" loading="lazy" />
+        </a>
+        <a class="ig-feed__tile reveal reveal--delay-5" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/retro/retro-go-fishing.jpg" alt="Studio post: Retro go fishing mural" loading="lazy" />
+        </a>
+        <a class="ig-feed__tile reveal reveal--delay-6" href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <img src="assets/images/backyard-murals/backyard-underwater.jpg" alt="Studio post: Backyard underwater mural" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <!-- Ported from prototype (BUILD-006, 2026-04-21). Split-column accordion.
+       The first item is open by default; toggle handled in js/main.js. -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq__wrap">
+        <div class="faq__side reveal">
+          <span class="section-label">Before you email us</span>
+          <h2 class="section-title">A few <span class="gradient-text">common questions</span>.</h2>
+          <p class="faq__intro">Most clients ask the same handful of things on our first call. Here they are up front, so you can plan your wall with confidence.</p>
+          <a href="contact.html" class="btn btn--primary" id="faq-cta-contact">
+            Still Got Questions? Ask Us <span class="btn__arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="faq__list reveal reveal--delay-2">
+          <div class="faq__item is-open">
+            <button class="faq__q" type="button" aria-expanded="true">How much does a mural cost? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">It depends on size, detail, and location, but most projects fall between $4,000 for a small interior wall and $40,000+ for stadium or multi-story exterior work. We give you a clear, fixed quote after the first visit. No surprises.</div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false">How long will it take? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">Small indoor pieces are often done in 2 to 4 days. Typical exterior walls run 1 to 3 weeks. Large commercial projects can take a month or more, and we always share a schedule before starting.</div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false">How long will the paint last outdoors? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">With proper surface prep and a UV-rated clearcoat, our exterior murals hold strong color for 7 to 10+ years, even in Florida sun and salt air. We include a touch-up guarantee for the first year.</div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false">Do I need a permit? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">Interior murals generally don't need permits. Exterior murals depend on your city and zoning. We've worked with St. Pete, Tampa, and surrounding municipalities for decades and can help navigate the process.</div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false">Can you work from our brand or concept? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">Always. We can start from a logo, a mood board, a color palette, or nothing at all. Most client relationships begin with a sketch session where we translate your brand into something that works at wall scale.</div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false">Do you travel outside Tampa Bay? <i class="fas fa-plus" aria-hidden="true"></i></button>
+            <div class="faq__a">Yes. We've painted in Las Vegas, nationally for SalonCentric, and regularly take projects across Florida. Travel and lodging are billed at cost.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <div class="cta__inner reveal">
+        <div class="cta__orb cta__orb--1"></div>
+        <div class="cta__orb cta__orb--2"></div>
+        <div class="cta__eyebrow">Let's Create Something</div>
+        <h2 class="cta__title">Ready to Transform<br><span class="gradient-text">Your Space?</span></h2>
+        <p class="cta__text">Let's turn your blank wall into a masterpiece. Whether it's a business, school, stadium, or your backyard — we've got you covered.</p>
+        <div class="cta__actions">
+          <a href="contact.html" class="btn btn--primary" id="cta-contact">
+            Start Your Project <span class="btn__arrow">&rarr;</span>
+          </a>
+          <a href="projects.html" class="btn btn--outline" id="cta-portfolio">
+            View Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+    <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><img src="assets/images/logo-white.png" alt="Vitale Bros." class="footer__logo-img" /></a>
+          <p class="footer__desc">Transforming blank walls into vibrant murals. Elevating St. Petersburg's artistic spirit since 1992.</p>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Navigate</h3>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link">Home</a>
+            <a href="about.html" class="footer__link">About</a>
+            <a href="projects.html" class="footer__link">Projects</a>
+            <a href="artbeat.html" class="footer__link">ArtBeat</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Services</h3>
+          <div class="footer__links">
+            <a href="projects.html" class="footer__link">Commercial Murals</a>
+            <a href="projects.html" class="footer__link">Residential Murals</a>
+            <a href="projects.html" class="footer__link">Live Painting</a>
+            <a href="projects.html" class="footer__link">Signs &amp; Canvas</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contact</h3>
+          <div class="footer__links">
+            <a href="mailto:info@vitalebrothers.com" class="footer__link">info@vitalebrothers.com</a>
+            <a href="tel:7276439280" class="footer__link">(727) 643-9280</a>
+            <span class="footer__link" style="color: var(--color-text-subtle)">St. Petersburg, FL</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span data-dynamic-year>2025</span> Vitale Bros. All Rights Reserved.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/vitalebros/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@vitalebros" target="_blank" rel="noopener" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/vitalebrostheartists" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@johnvitale8133" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

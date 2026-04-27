@@ -1,0 +1,12 @@
+# Vitale Bros. robots.txt
+
+User-agent: *
+Allow: /
+
+# Block dev scaffolding if it ends up deployed
+Disallow: /_partials/
+Disallow: /_prototypes/
+Disallow: /.backup-preinclude/
+Disallow: /node_modules/
+
+Sitemap: https://vitalebrothers.com/sitemap.xml
