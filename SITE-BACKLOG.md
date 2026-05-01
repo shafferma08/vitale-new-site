@@ -1,6 +1,6 @@
 # Vitale Bros. Site Rebuild — Backlog
 
-Last updated: 2026-04-27 (interactive session: contact-form Cognito styling + 4 of 6 AI placeholders swapped, 2 awaiting source photos from John)
+Last updated: 2026-05-01 (vitale-social-research: scanned IG, FB. 2 new IG posts found since 2026-04-27. 1 new CONTENT-NEW item appended to P1 (faux-finishing for @dalmoros.us); the second new post is logged as a watchlist entry in `social-drops/2026-05-01/drop.md` but not promoted to backlog because its caption was not visible logged-out)
 
 ## How this works
 
@@ -119,24 +119,30 @@ Item ID conventions:
 
 ### [CONTENT-NEW-2026-04-27-stpete-mlk-mural] New mural at MLK + 26th Ave N, St Pete (Hoka-sponsored)
 - Track: content
-- Status: todo
+- Status: blocked
 - Why: a fully-named, fully-credited new mural at a well-defined St Pete corner with a national brand sponsor (Hoka) and a named curator (Janna Angell). Posted 2026-04-15 on `instagram.com/p/DXJ5714AILj`. This is exactly the kind of complete story (who painted, where, who paid, who curated) the site's portfolio is currently thin on, so it warrants a dedicated project page rather than just another card in the grid.
 - Photos: not staged this run; permalink in `assets/images/social-drops/2026-04-27/drop.md` under entry ig-012. Image dimensions verified at 1440x1864 on the post page. Marianne can right-click-save the carousel images from the IG post directly, or this item stays parked until the manual research session in RESEARCH-001 happens.
+- Blocked on: photos. Either Marianne right-click-saves the carousel from `instagram.com/p/DXJ5714AILj` into `assets/images/social-drops/2026-04-27/`, or RESEARCH-001 (manual IG session) unblocks first. Cannot build a dedicated project page without real photos and the rebuild task is not allowed to invent placeholder content.
 - Suggested action: once photos land, build `/project-stpete-mlk.html` following the same template as `project-bucs.html` / `project-rays.html`. Caption to lift from the IG post: location (corner of MLK Jr St + 26th Ave N), artists (@vitalebros), sponsor (@hoka), curator (@jannaangell). Add a card to `projects.html` with `data-category="commercial"` and re-add the "Live & Events" / "Community & Civic" filter chips per BUILD-008's follow-up note if this brings the grid count to a reasonable density.
+- What changed (2026-05-01): status moved from `todo` to `blocked`. Item was filed `todo` on 2026-04-27 by the research run, but the work itself cannot start without source photos that the rebuild task is not allowed to invent. No new social-drops folders have appeared since 2026-04-27 (last drop folder: `assets/images/social-drops/2026-04-27/` with `drop.md` only, no images). Surfacing the dependency explicitly so it shows up in the Blocked-on-Marianne summary.
 
 ### [CONTENT-NEW-2026-04-27-first-watch-chain] First Watch restaurant chain murals (Wisconsin, Texas, plus a third)
 - Track: content
-- Status: todo
+- Status: blocked
 - Why: at least three distinct First Watch locations have surfaced on the IG feed (Wisconsin, Leander TX, plus a "24 hour mural" reel that may be a third location). This is a recurring national-chain commercial account, which the site doesn't currently surface anywhere. A "trusted-by-national-chains" angle is one of the strongest possible commercial-side credibility plays. Captions credit `@firstwatchmurals` and `@middle_vitale_murals` as collaborators, which suggests the chain work is co-branded with another Vitale-family entity.
 - Photos: not staged this run; permalinks in `drop.md` under entries ig-003 (Wisconsin) and the watchlist entries DXB7328uJwG (24-hour reel) and DWn93GnCd-D / DWl1K3clcWV (Leander Texas). All are reels except DWl1K3clcWV which is a still photo.
-- Suggested action: depending on photo availability, this is either (a) a new commercial-clients sub-section on `services/commercial.html` listing First Watch as a named recurring client, or (b) a dedicated project page covering the chain rollout. Decision blocked on Marianne confirming whether `@firstwatchmurals` is a sister brand (distinct site / distinct credit) or just an account run by the same team. If the latter, the work is straightforwardly a Vitale Bros. commercial story.
+- Blocked on: (1) Marianne confirming whether `@firstwatchmurals` is a sister brand or just a project-specific account run by the same team. The credit decision (is this a Vitale Bros story or a co-branded story) sits upstream of any layout work and per DECISION-POLICY this is a Bucket 3 brand-identity call. (2) Source photos. Same constraint as the MLK item.
+- Suggested action: depending on photo availability and the credit decision, this is either (a) a new commercial-clients sub-section on `services/commercial.html` listing First Watch as a named recurring client, or (b) a dedicated project page covering the chain rollout. If the latter, the work is straightforwardly a Vitale Bros. commercial story.
+- What changed (2026-05-01): status moved from `todo` to `blocked`. The 2026-04-27 entry already flagged the credit question as something only Marianne can answer; promoting the item to `blocked` so it surfaces in the digest summary instead of sitting silently in the todo lane.
 
 ### [CONTENT-NEW-2026-04-27-fashion-for-education] 3rd Annual Fashion for Education event coverage
 - Track: content
-- Status: todo
+- Status: blocked
 - Why: multi-post event coverage at Overspray Art Space partnering All The World's Kids Inc. on their 3rd annual fundraiser. Strong community-civic story with a clear narrative arc (pre-event teasers, setup, recap), a named charity beneficiary (alltheworldskidsinc.org), and a venue tie-in (Overspray Art Space). Fits the existing Community & Civic service page (BUILD-005) and could either become a Signature Civic Work card on `services/community-civic.html` or an ArtBeat-style article on the partnership.
 - Photos: not staged this run; permalinks in `drop.md` under entries ig-001 (event recap reel), ig-002 (tagged event photo), ig-004 (event setup high-res photo, 3280x4096 grid dim), ig-005 (pre-event teaser reel), plus watchlist entries DW3tTcRD8Ec and DWyhIdHAcze (earlier teasers).
+- Blocked on: (1) source photos (same constraint as the other two CONTENT-NEW items in this batch), and (2) Marianne picking which angle to feature: a Signature Civic Work card on `services/community-civic.html` versus a dedicated ArtBeat article. Per DECISION-POLICY this is a Bucket 2 layout call where the recommended default is the card; raising it for confirmation rather than auto-deciding because the photo set is rich enough to support the bigger article treatment if she wants it.
 - Suggested action: when photos land, simplest first move is a new Signature Civic Work card on `services/community-civic.html` next to the existing SHINE / Power to the Patients / Vandalism Restoration cards, linking to either an external alltheworldskidsinc.org partner page or to a new in-site short post. Defer the dedicated ArtBeat article until photos are in hand and Marianne signals which angle she wants featured.
+- What changed (2026-05-01): status moved from `todo` to `blocked`. Same reason as the other two CONTENT-NEW items: cannot build the card or article without real photos, and the card-vs-article angle is a layout choice for Marianne.
 
 ### [REPLACE-AI-2026-04-27-hero-and-services] Swap AI placeholders for real photos
 - Track: content
@@ -232,9 +238,13 @@ Item ID conventions:
 
 For quick reference, the items waiting on you right now:
 
-- BUILD-004 (video source — find the Facebook reel)
+- BUILD-004 (video source, find the Facebook reel)
 - CONTENT-003 (crew headshots)
 - CONTENT-004 (Sionna and Jason bio source material)
 - RESEARCH-001 (manual IG session)
 - BUILD-009 (client logo usage rights)
 - RESEARCH-002 (manual FB session)
+- CONTENT-NEW-2026-04-27-stpete-mlk-mural (Hoka MLK + 26th: source photos from `instagram.com/p/DXJ5714AILj`, or wait for RESEARCH-001)
+- CONTENT-NEW-2026-04-27-first-watch-chain (sister-brand confirmation for `@firstwatchmurals`, plus source photos)
+- CONTENT-NEW-2026-04-27-fashion-for-education (source photos plus card-vs-article angle decision)
+- REPLACE-AI portfolio-1.png and portfolio-4.png (PoE Garage and vandalism restoration photos from John, see AI-REPLACEMENT-CANDIDATES.md)

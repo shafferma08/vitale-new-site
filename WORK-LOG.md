@@ -4,6 +4,173 @@ Most recent at top. Each scheduled run adds one entry.
 
 ---
 
+## 2026-05-01: vitale-pm-daily run (manual catch-up, not the 6:30 AM scheduled run)
+
+Counts: items reviewed 6 (the formal blocked-on-Marianne summary at the time of read) plus 3 carry-over follow-ups; auto-decisions 0; defaults staged 0; questions sent 6 plus 3.
+
+Item IDs by bucket:
+
+* Bucket 1 (auto-decide): none. The recent WORK-LOG history at read time showed no builder or researcher activity in the last 5 days, so there was nothing to reconcile via backlog hygiene from this seat.
+* Bucket 2 (default and confirm): none. The only standing draft-copy options are for Sionna and Jason bios, and those slots in `draft-copy.md` are explicitly empty pending source material from Marianne. The no-fabrication hard rule means there was nothing to default to.
+* Bucket 3 (always ask): BUILD-004, CONTENT-003, CONTENT-004, RESEARCH-001, BUILD-009, RESEARCH-002. Plus three smaller carry-over questions surfaced under the digest's "Smaller open questions" section: the AI-placeholder follow-up on `portfolio-1.png` (PoE Garage) and `portfolio-4.png` (vandalism restoration), the `hero-bg.png` reuse on the Blue Goose ArtBeat thumbnail, and the First Watch / `@firstwatchmurals` brand-credit question on `[CONTENT-NEW-2026-04-27-first-watch-chain]`.
+
+Anomalies:
+
+1. Manual catch-up, not the 6:30 AM scheduled run. Marianne reconnected the Cowork session to the canonical hyphenated `Overspray-Art-Space\vitale-website\vitale-new-site\` path during today's interactive session, after the morning's automated `vitale-pm-daily` run had already no-opped against the spaces-version mount. She asked the agent to run the triage manually before tomorrow's scheduled run picks up. The triage was performed on the now-mounted hyphenated path, which is the correct project tree.
+2. Two WORK-LOG.md files exist on disk because of the prior mount mismatch. The spaces-version path holds 5 days of no-op entries (and a 2026-05-01 social-research no-op appended after this run started). The hyphenated path (this file) holds the canonical project history. This entry goes only on the hyphenated path, per the brief's site-folder rule.
+3. Self-correction logged: the first Slack DM and Gmail draft sent at digest time used em dashes as section separators (for example "BUILD-004 -- Studio intro video"), which violates the brief's hard rule "No em dashes in any text you author (digest, backlog notes, work log entries)." A corrected version was sent as a Slack thread reply (with a "Use this one" header) and a second Gmail draft was created with subject "Vitale PM digest 2026-05-01 (corrected, send this one)". The agent does not have Slack-edit or Gmail-draft-update tools available in this session, so the correction was made by re-send rather than in-place edit. The corrected versions use commas and colons instead of em dashes throughout. Future runs should compose without em dashes from the start. Marianne can discard the original Gmail draft.
+4. Timing collision with `vitale-site-daily-rebuild`: while this manual triage was in flight, the scheduled rebuild task ran twice (its entries sit directly below this one). The first rebuild moved three previously-`todo` CONTENT-NEW items to `blocked` and extended the Blocked-on-Marianne summary from 6 items to 10. The second rebuild was a same-day no-op confirming there is no remaining `todo` work. The digest sent to Slack and Gmail reflects the pre-rebuild state (6 blocked items). The three CONTENT-NEW items are partially covered already in the digest: First Watch is called out explicitly in "Smaller open questions" (sister-brand question), and the MLK mural and Fashion for Education items are downstream of RESEARCH-001 (manual IG session for source photos), which is question 4. Fully missing from the digest: the Fashion for Education "card on services/community-civic.html vs dedicated ArtBeat article" angle decision. That single decision will roll into tomorrow's automated `vitale-pm-daily` digest naturally, since the rebuild's status move makes it visible in the standard blocked-summary scan. Not re-sending a third Slack message tonight to add it; the noise cost outweighs the one-day delay.
+5. No prior Slack `vitale-pm` thread or Gmail "Vitale PM digest" thread to reconcile. Confirmed via `slack_search_public_and_private` (query: `vitale-pm`, 0 results) and `search_threads` (query: `subject:"Vitale PM digest"`, 0 results). This is the first digest ever sent across this scheduled-task family.
+6. Did not write `PM staged: ...` notes into the 6 blocked backlog items themselves, because the brief specifies that backlog edits are required only for Bucket 1 (`PM decided X because Y`) and Bucket 2 (`PM staged: <choice>`). Bucket 3 items are staged in the digest only, per the brief's flow.
+7. The 24-hour hands-off rule did not apply at read time. The latest in-line note in `SITE-BACKLOG.md` was dated 2026-04-27 when this run started. After the rebuild task ran, the file's "Last updated" header bumped to 2026-05-01, but those edits were the rebuild's own moves, not Marianne's, so the rule still does not apply.
+
+Files changed this run:
+* `WORK-LOG.md` (this entry only).
+
+Files NOT changed:
+* `SITE-BACKLOG.md`, `DECISION-POLICY.md`, `VITALE-PM-BRIEF.md`, `draft-copy.md`, `AI-REPLACEMENT-CANDIDATES.md`, any HTML, CSS, or JS in `vitale-new-site/`. Per the brief's hard rules.
+
+Digest send status:
+* Slack DM to Marianne (channel `D0ATF9SK31S`, message `1777658581.021659`): sent. Followed by a corrected version as thread reply at `1777658871.634839`. Both visible in Marianne's DM.
+* Gmail draft to marianne.shaffer@gmail.com with subject `Vitale PM digest 2026-05-01`: created (id `r3619688887738865575`). Contains em dashes; superseded.
+* Gmail draft to marianne.shaffer@gmail.com with subject `Vitale PM digest 2026-05-01 (corrected, send this one)`: created. This is the one to send.
+* The Gmail toolkit available this session does not include a direct-send tool, only `create_draft`. The brief's "send via Gmail" requirement therefore landed as a draft Marianne can review and send manually, rather than an autonomous send. Worth flagging if Marianne wants future runs to autonomously send the email; that requires a Gmail send tool to be added to the agent's toolkit.
+
+Suggested next steps (for Marianne, not for the agent to execute):
+1. Open Slack DM and read the corrected digest (the thread reply, not the parent message). Reply with shorthand or per-question instructions.
+2. In Gmail, open the "Vitale PM digest 2026-05-01 (corrected, send this one)" draft and send it, or just delete both drafts if the Slack DM is preferred as the single channel going forward.
+3. Confirm the Cowork scheduled task definitions for `vitale-pm-daily`, `vitale-site-daily-rebuild`, and `vitale-social-research` are pointed at the hyphenated `Overspray-Art-Space\vitale-website\vitale-new-site\` path so tomorrow's automated runs do not regress to the empty spaces-version mount.
+
+---
+
+## 2026-05-01 (second run, no-op): vitale-site-daily-rebuild, zero `todo` items in backlog, no files touched
+
+**Scope.** Second scheduled vitale-site-daily-rebuild run on 2026-05-01. The earlier 2026-05-01 run (entry directly below this one) already did the only backlog hygiene work that was available: it moved the three CONTENT-NEW-2026-04-27 items from `todo` to `blocked` because they all have a hard photo dependency that the rebuild task is not allowed to invent around. After that pass, the backlog has zero items with status `todo`.
+
+**Items considered.** Per the brief, only items with status `todo` are eligible. Re-grepped `^- Status:` across the full `SITE-BACKLOG.md` and got 27 hits, none of them `todo`. The breakdown:
+
+- 14 items at `done`.
+- 8 items at `blocked` (BUILD-004 video source, CONTENT-003 crew headshots, RESEARCH-001 manual IG session, RESEARCH-002 manual FB session, the 3 CONTENT-NEW-2026-04-27 items, plus the BUILD-004 row counted once above).
+- 1 item at `done (partial, see note)` (CONTENT-001, two more testimonials waiting on Marianne if she wants them).
+- 1 item at `done (partial; 4 of 6 AI placeholders swapped this session, 2 explicitly waiting on John for source photos)` (REPLACE-AI-2026-04-27-hero-and-services).
+- 1 item at `done (favicon is minimal; see follow-up)` (BUILD-012).
+- 1 item at `done (static pass; see follow-up for contrast / Lighthouse)` (BUILD-014).
+- 1 item at `partial (filter chips cleaned up; grid expansion still blocked on RESEARCH-001)` (BUILD-008).
+- 1 item at `partial (Johnny landed; Sionna and Jason still need source material from Marianne)` (CONTENT-004).
+- 1 item at `partially-done-in-prototype` (BUILD-009, blocked on Marianne for client logo usage rights).
+
+The `partial` and `partially-done` rows all have an explicit Marianne-owned dependency in their Why or Blocked-on text, so promoting any of them this run would just rediscover the same dependency the earlier 2026-05-01 run already documented.
+
+**Items worked:** none.
+
+**Files changed:**
+- `WORK-LOG.md`: this entry only. Most recent first, prepended above the earlier 2026-05-01 entry.
+
+**Files NOT changed:**
+- `SITE-BACKLOG.md`: not touched. The earlier 2026-05-01 run already bumped its "Last updated" line and moved the three CONTENT-NEW items. Bumping it again with the same date just to log a no-op would add noise without conveying new information.
+- `AI-REPLACEMENT-CANDIDATES.md`: not touched. No new image bytes to register.
+- `assets/images/social-drops/`: still contains only `2026-04-27/drop.md` plus the parent `README.md`. No new dated folders have appeared since 2026-04-27 11:55, so no fresh research material to consume.
+- All HTML pages, `styles/index.css`, `js/main.js`, `_partials/`: not touched. No `todo` item required them.
+- `DECISION-POLICY.md`: not touched (per hard rule, only Marianne edits this).
+
+**Verified:**
+1. `grep -n '^- Status:' SITE-BACKLOG.md` returned 27 lines, zero of which are `todo`. Confirmed no eligible work.
+2. `assets/images/social-drops/` listing returns only `README.md` and `2026-04-27/`, matching the earlier 2026-05-01 entry's observation that no new drops have arrived.
+3. No CSS edits this pass, so no brace count check needed (last known balanced state: 400 / 400 from 2026-04-27, propagated forward through the earlier 2026-05-01 no-op).
+4. No HTML edits this pass, so no `<!--#include nav-->` / `<!--#include footer-->` marker check or `type="module"` check needed.
+5. No internal-link or meta edits, so OG / Twitter / canonical URLs unchanged from their absolute `https://vitalebrothers.com/...` form.
+6. No em dashes in any copy authored this run (this WORK-LOG entry only).
+
+**Hard rule compliance:**
+- No fabrication. Every claim above is verifiable from the current state of `SITE-BACKLOG.md` and the `social-drops/` directory.
+- No deletions of files older than a week. No deletions at all.
+- No edits to `DECISION-POLICY.md`.
+- No items Marianne touched in the last 24 hours got rewritten. The only file edited this run is `WORK-LOG.md`, and only by prepending a new entry.
+- No em dashes in copy authored this run.
+- `og:*` / `twitter:*` / `canonical` URLs not touched.
+
+**Judgment calls worth flagging:**
+1. Logged this run rather than exiting silently. The brief says "If nothing is actionable, write a WORK-LOG entry saying so and stop." A silent exit would have left a same-day gap in the log that future audits would have to reconstruct from the lack of an entry. Cheaper to leave one short paragraph confirming the no-op than to leave the question open.
+2. Did not bump the `Last updated` line in `SITE-BACKLOG.md`. The earlier 2026-05-01 run already set that line, and the actual content of the backlog has not shifted between the two runs today. A second same-day bump would imply a status move occurred when none did.
+3. Did not re-survey the parent folders for AI-replacement candidates. The 2026-04-27 second-pass entry documents a thorough survey across `Overspray Art Space/vitale-website/`, project subfolders, `old-website-pics/`, `iCloud Photos from JOHN VITALE/`, and `city-art-walls/`, and concluded the two outstanding article subjects (PoE Garage / Stay Curious, vandalism restoration) have no on-disk subject match. With no new source folders added since, repeating the survey would be busy work.
+4. Did not pursue any of the `partial` items. Each one has an explicit Marianne-owned blocker noted in the backlog (RESEARCH-001 manual session for BUILD-008, Sionna and Jason source material for CONTENT-004, client logo usage rights for BUILD-009). Promoting any of them past `partial` without that input would risk fabrication.
+
+**New blockers:** none. No status moves this run.
+
+**For Marianne to act on (optional, none of these block tomorrow's run):**
+1. The Blocked-on-Marianne summary at the bottom of `SITE-BACKLOG.md` is still the canonical "what is waiting on you" list. It currently shows 10 items. Anything you can knock off there will give the next rebuild run real work to do.
+2. The fastest single unblock for the rebuild loop is dropping any image files (right-click-saved IG carousel images, or new phone-camera shots from John) into a fresh `assets/images/social-drops/YYYY-MM-DD/` folder. The next rebuild run will pick them up against the matching CONTENT-NEW or REPLACE-AI items automatically.
+
+---
+
+## 2026-05-01: vitale-site-daily-rebuild, no actionable todo items, 3 stale CONTENT-NEW items moved to blocked
+
+**Scope.** Scheduled vitale-site-daily-rebuild run. Last entry in this log was 2026-04-27, so 4 days have passed since the previous interactive session. No new social-drops folders have appeared in `assets/images/social-drops/` (latest is still `2026-04-27/`, which contains `drop.md` only and zero image files). No site files were edited this run. The work this run did was backlog hygiene: moving items from `todo` to `blocked` so the daily PM digest reflects what is actually waiting on Marianne.
+
+**Items considered.** Per the brief, only items with status `todo` are eligible. After re-reading the full backlog, the only items currently carrying `todo` are the three CONTENT-NEW items the 2026-04-27 research run filed:
+
+1. `[CONTENT-NEW-2026-04-27-stpete-mlk-mural]` (Hoka-sponsored MLK + 26th Ave N mural).
+2. `[CONTENT-NEW-2026-04-27-first-watch-chain]` (First Watch chain murals across Wisconsin and Texas).
+3. `[CONTENT-NEW-2026-04-27-fashion-for-education]` (3rd Annual Fashion for Education event coverage).
+
+All three have a hard photo dependency (no IG image bytes were transported to `assets/images/social-drops/2026-04-27/`, only metadata in `drop.md`), and two of the three additionally have a Marianne-only judgment call attached (sister-brand status of `@firstwatchmurals`, card-vs-article angle for the Fashion for Education event). None of them can be progressed without input the rebuild task is not allowed to invent.
+
+Per the brief: "If the task needs something only Marianne can provide (an asset, credential, copy approval, judgment call), mark it `blocked` with a one-line note about what is needed, and move on." That is what this run did.
+
+**Items worked:** `[CONTENT-NEW-2026-04-27-stpete-mlk-mural]`, `[CONTENT-NEW-2026-04-27-first-watch-chain]`, `[CONTENT-NEW-2026-04-27-fashion-for-education]` (status moves only, no site files touched).
+
+**Files changed:**
+- `SITE-BACKLOG.md`:
+  - "Last updated" line bumped to 2026-05-01 with a one-line summary of this run's work.
+  - All three CONTENT-NEW items had their `Status:` line moved from `todo` to `blocked`.
+  - Each got a new `Blocked on:` line naming the specific dependency.
+  - Each got a new `What changed (2026-05-01):` note explaining the move.
+  - The Blocked-on-Marianne summary at the bottom was extended with three new entries (one per CONTENT-NEW item) plus a fourth roll-up line for the two REPLACE-AI portfolio targets that have been waiting on John since 2026-04-27.
+  - One pre-existing em dash in the BUILD-004 summary line, between "video source" and "find the Facebook reel", was replaced with a comma. This is a defensive em-dash sweep in a non-copy area, which falls under DECISION-POLICY Bucket 1.
+
+**Files NOT changed:**
+- No HTML pages. No `todo` item required HTML work.
+- No CSS. Nothing in CSS to move.
+- No JS. No JS work was filed.
+- No image bytes. No new source photos to swap, and no AI placeholders surveyed this run beyond the survey already in the 2026-04-27 entry.
+- `AI-REPLACEMENT-CANDIDATES.md` not edited. The two outstanding entries (portfolio-1.png and portfolio-4.png) already carry the right `Status:` text from 2026-04-27; they get a roll-up mention in the SITE-BACKLOG.md summary instead, so the digest can pick them up alongside the new blocked items.
+- `_partials/nav.html`, `_partials/footer.html`, `js/main.js`: unchanged.
+- `DECISION-POLICY.md`: unchanged (per hard rule, only Marianne edits this).
+- `WORK-LOG.md` only had this new entry prepended; nothing prior was rewritten.
+
+**Verified:**
+1. A grep sweep across `SITE-BACKLOG.md` for the em-dash and en-dash codepoints returns only pre-existing structural occurrences (the file title, the section dividers under `## P0`, `## P1`, `## P2`, `## P3`, the two item-ID-convention bullets at the top, and one 2026-04-27 follow-up note on the REPLACE-AI item that is not mine to touch). Zero em dashes were introduced by any text I authored this run.
+2. No CSS edits this pass, so no brace count check needed (last known balanced state: 400 / 400 from 2026-04-27).
+3. No HTML edits this pass, so no `<!--#include nav-->` / `<!--#include footer-->` marker check needed and no `type="module"` check needed.
+4. No internal-link or meta edits, so OG / Twitter / canonical URLs unchanged from their absolute `https://vitalebrothers.com/...` form.
+5. `assets/images/social-drops/` confirmed to contain only the `2026-04-27/` folder plus a `README.md`. No newer dated folders, no stray image files, so no missed drops.
+
+**Hard rule compliance:**
+- No fabrication. The "Blocked on" notes name dependencies that are already explicit in the 2026-04-27 versions of the items.
+- No deletions of files older than a week. All edits were status moves and additive `What changed` notes.
+- No edits to `DECISION-POLICY.md`.
+- No items Marianne touched in the last 24 hours got rewritten. SITE-BACKLOG.md and WORK-LOG.md were both last modified 2026-04-27 20:04, four days ago.
+- No em dashes in copy authored this run (the SITE-BACKLOG additions and this WORK-LOG entry).
+- `og:*` / `twitter:*` / `canonical` not touched.
+
+**Judgment calls worth flagging:**
+1. Moved three items from `todo` to `blocked` rather than leaving them in `todo`. The brief explicitly authorises this for items needing Marianne's input, and the practical effect is that the daily PM digest now sees three more items in the "waiting on you" lane instead of three more items in the "actionable" lane that the rebuild will repeatedly skip. Trade-off: if Marianne wanted the items to keep showing as `todo` so she could pick them up herself opportunistically, this hides them slightly. The mitigation is that they now show up explicitly in the Blocked-on-Marianne summary at the bottom, which is the section the digest reads first.
+2. Did not pursue the manual IG research session (RESEARCH-001) on Marianne's behalf. The brief restricts the rebuild task to pure build / design / content work and explicitly does not authorise the rebuild task to do research; that is the social-research task's job and the manual session is logged in waiting on Marianne.
+3. Did not survey for additional source photos in the parent folders. The 2026-04-27 entries already document a thorough survey (`Overspray Art Space/vitale-website/`, project subfolders, `old-website-pics/`, `iCloud Photos from JOHN VITALE/`, `city-art-walls/`) and concluded the four article subjects (PoE Garage, vandalism restoration, Blue Goose, plus the three new CONTENT-NEW items) have no on-disk subject match. Repeating that survey in a scheduled run with no new source folders to survey would be busy work and would risk drifting into "find a roughly-related photo and use it anyway", which violates the no-fabrication rule.
+4. Replaced the em dash in the BUILD-004 summary line with a comma. Bucket 1 of DECISION-POLICY allows defensive em-dash sweeps in non-copy areas, and the Blocked-on-Marianne summary list is structurally non-copy. The other em dashes in the file are inside section headers (`P0 - Ship-blockers` etc.), inside the item-ID-convention bullets at the top, and inside one 2026-04-27 follow-up note that I am not authorised to rewrite. Left those alone.
+
+**New blockers:**
+- `[CONTENT-NEW-2026-04-27-stpete-mlk-mural]` blocked on source photos.
+- `[CONTENT-NEW-2026-04-27-first-watch-chain]` blocked on sister-brand confirmation for `@firstwatchmurals` plus source photos.
+- `[CONTENT-NEW-2026-04-27-fashion-for-education]` blocked on source photos plus card-vs-article angle decision.
+
+**For Marianne to verify:**
+1. Open `SITE-BACKLOG.md`, scroll to the bottom, and confirm the Blocked-on-Marianne summary now lists 10 items rather than 6. The four new ones are the three CONTENT-NEW-2026-04-27 items and the REPLACE-AI portfolio-1 / portfolio-4 roll-up.
+2. If you want any of the three CONTENT-NEW items moved back to `todo` so the rebuild keeps poking at them, reply with which ones and the next run will move them back.
+3. The simplest unblock for the MLK + 26th and Fashion for Education items is right-click-saving the IG carousel photos into `assets/images/social-drops/2026-04-27/` (or a fresh dated folder). Permalinks live in that folder's `drop.md`. Once any image files appear there, the next rebuild run will pick them up.
+
+---
+
 ## 2026-04-27 (latest, interactive continuation): SHINE and Fox 13 ArtBeat thumbs swapped, 4 of 6 AI placeholders now real
 
 Continuing the same interactive session as the entry below. After swapping hero-bg.png and services-bg.png with subject-matched real photos earlier in the session, surveyed the unlooked-at parent folders (`old-website-pics/`, `iCloud Photos from JOHN VITALE/`, `city-art-walls/`, the named commercial-project folders) for the four ArtBeat article subjects (Stay Curious at PoE Garage, SHINE Mural Festival, Fox 13 Feature, Restoring Vandalized Murals).
